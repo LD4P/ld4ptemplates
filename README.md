@@ -7,7 +7,7 @@ Changes made to the LC Profiles and Resource Templates to make them compatible w
 3. LC templates declared a stricter schema than the one the Sinopia Profile Editor outputs, so when attempting to upload into the Editor, there were some Profiles that had a problem with having a default literal but not a default URI. Opened these in the Profile Editor and exported, which reset the schema to 0.0.9 and then they loaded in to the Editor with no problems.
 4. revised address of external lookup sources from http... to https.... or added QA urn where needed
 5. removed duplicate propertyURIs in templates (various strategies used, see notes in [Loading LC Profiles spreadsheet](https://docs.google.com/spreadsheets/d/1j2OUoXBmmvfC-vCnG02ynoQGFB5Q-pFsnRSszleZ78w/) (NOTE: did not fix all of these problems, but fixed several so we can see how these templates look in Sinopia and decide if we like the fix; see details in spreadsheet). See [Why Sinopia doesn't allow repeated propertyURIs in a single Resource Template](https://github.com/LD4P/sinopia/wiki/Why-Sinopia-doesn't-allow-repeated-propertyURIs-in-a-single-Resource-Template)
-6. "Subject" fields that use the "subject composer": LC uses property type = `list`, Sinopia doesn't support, changed some of these to be a lookup to authorized headings (did not change all, but enough of them to see how it looks; see details in spreadsheet)
+6. "Subject" fields that use the "subject composer" (nested Resource Template lc:RT:bf2:Components): LC uses property type = `list`, Sinopia doesn't support, changed some of these to be a lookup to authorized headings from LCSH and LCNAF (did not change all, but enough of them to see how it looks; see details in see notes in [Loading LC Profiles spreadsheet](https://docs.google.com/spreadsheets/d/1j2OUoXBmmvfC-vCnG02ynoQGFB5Q-pFsnRSszleZ78w/)) 
 7. changed all Profile and Resource Template ID prefixes from `lc` to `ld4p`
 8. changed dates on all Profiles and Resource Templates to `2019-08-19`
 9. changed authors on all Profiles and Resource Templates from `NDMSO` to `LD4P`
@@ -17,7 +17,11 @@ Changes made to the LC Profiles and Resource Templates to make them compatible w
 13. renamed generically named Resource Templates, for example, "BIBFRAME Item" renamed to "\_Cartographic Item (BIBFRAME)"
 14. for Resource Templates in Profiles that include a starting point Resource Template, added remark `based on LC template [LC template ID]`
 
-The [Loading LC Profiles spreadsheet](https://docs.google.com/spreadsheets/d/1j2OUoXBmmvfC-vCnG02ynoQGFB5Q-pFsnRSszleZ78w/) documents the changes made. The **Changes to Profiles** tab shows changes made to the Profile files to get them to import into Sinopia, and the **Changes by Resource Template** tab shows changes made to get the Resource Templates to open successfully once loaded.
+The [Loading LC Profiles spreadsheet](https://docs.google.com/spreadsheets/d/1j2OUoXBmmvfC-vCnG02ynoQGFB5Q-pFsnRSszleZ78w/) documents the changes made. The significant tabs are:
+* **Changes to Profiles**: changes made to the Profile files to get them to import into Sinopia
+* **Changes by Resource Template**: changes made to get the Resource Templates to open successfully once loaded
+* **useValuesFrom**: lookups in LC templates; the ones in red (those with a blank in the Corresponding Sinopia URN/URL column) are the ones not yet supported in Sinopia
+* **LC Default Values**: templates with defaults set to LC-specific values that won't be appropriate for other institutions
 
 NOTE:
 As of August 19, 2019, these templates are on the [Sinopia development site](http://development.sinopia.io) for review, with the exception of Resource Templates from following Profiles (BIBFRAME 2.0 Sound Recording-Analog.json, BIBFRAME 2.0 Sound Recording-Audio Cassette.json, BIBFRAME 2.0 Sound Recording-Audio CD-R.json, BIBFRAME 2.0 Sound Recording-Audio CD.json, Prints & Photographs.json) (see the [Loading LC Profiles spreadsheet](https://docs.google.com/spreadsheets/d/1j2OUoXBmmvfC-vCnG02ynoQGFB5Q-pFsnRSszleZ78w/) spreadsheet, **Changes by Resource Template** tab for what remains to be done with Resource Templates from those Profiles)
