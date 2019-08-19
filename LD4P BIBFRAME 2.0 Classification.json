@@ -1,0 +1,69 @@
+{
+    "Profile": {
+        "resourceTemplates": [
+            {
+                "propertyTemplates": [
+                    {
+                        "mandatory": "false",
+                        "repeatable": "true",
+                        "type": "literal",
+                        "propertyURI": "http://id.loc.gov/ontologies/bibframe/classificationPortion",
+                        "propertyLabel": "DDC Classification number"
+                    },
+                    {
+                        "mandatory": "false",
+                        "repeatable": "false",
+                        "type": "lookup",
+                        "valueConstraint": {
+                            "useValuesFrom": [
+                                "https://id.loc.gov/vocabulary/classSchemes"
+                            ],
+                            "valueDataType": {
+                                "dataTypeURI": "http://id.loc.gov/ontologies/bibframe/edition"
+                            }
+                        },
+                        "propertyURI": "http://id.loc.gov/ontologies/bibframe/edition",
+                        "propertyLabel": "Dewey Edition"
+                    }
+                ],
+                "id": "ld4p:RT:bf2:DDC",
+                "resourceLabel": "Dewey Decimal Classification",
+                "resourceURI": "http://id.loc.gov/ontologies/bibframe/ClassificationDdc",
+                "author": "LD4P",
+                "date": "2019-08-19",
+                "schema": "https://ld4p.github.io/sinopia/schemas/0.2.0/resource-template.json"
+            },
+            {
+                "propertyTemplates": [
+                    {
+                        "mandatory": "false",
+                        "repeatable": "true",
+                        "type": "literal",
+                        "propertyURI": "http://id.loc.gov/ontologies/bibframe/classificationPortion",
+                        "propertyLabel": "LC Classification Number"
+                    },
+                    {
+                        "mandatory": "false",
+                        "repeatable": "true",
+                        "type": "literal",
+                        "propertyURI": "http://id.loc.gov/ontologies/bibframe/itemPortion",
+                        "propertyLabel": "Classification item number"
+                    }
+                ],
+                "id": "ld4p:RT:bf2:LCC",
+                "resourceLabel": "Library of Congress Classification",
+                "resourceURI": "http://id.loc.gov/ontologies/bibframe/ClassificationLcc",
+                "author": "LD4P",
+                "date": "2019-08-19",
+                "schema": "https://ld4p.github.io/sinopia/schemas/0.2.0/resource-template.json"
+            }
+        ],
+        "id": "ld4p:profile:bf2:Classification",
+        "description": "Classification (DDC and LCC), based on LC profile as of Aug-07-2019",
+        "title": "LD4P BIBFRAME 2.0 Classification",
+        "date": "2019-08-19",
+        "author": "LD4P",
+        "adherence": "RDA",
+        "schema": "https://ld4p.github.io/sinopia/schemas/0.2.0/profile.json"
+    }
+}

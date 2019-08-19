@@ -1,0 +1,68 @@
+{
+    "Profile": {
+        "resourceTemplates": [
+            {
+                "propertyTemplates": [
+                    {
+                        "mandatory": "false",
+                        "repeatable": "false",
+                        "type": "lookup",
+                        "valueConstraint": {
+                            "useValuesFrom": [
+                                "urn:ld4p:qa:genres"
+                            ]
+                        },
+                        "propertyLabel": "Search LCGFT",
+                        "propertyURI": "http://id.loc.gov/ontologies/bibframe/GenreForm",
+                        "remark": "http://access.rdatoolkit.org/6.3.html"
+                    }
+                ],
+                "id": "ld4p:RT:bf2:Form",
+                "resourceURI": "http://id.loc.gov/ontologies/bibframe/GenreForm",
+                "resourceLabel": "Form/Genre",
+                "author": "LD4P",
+                "date": "2019-08-19",
+                "schema": "https://ld4p.github.io/sinopia/schemas/0.2.0/resource-template.json"
+            },
+            {
+                "propertyTemplates": [
+                    {
+                        "mandatory": "false",
+                        "repeatable": "false",
+                        "type": "lookup",
+                        "valueConstraint": {
+                            "useValuesFrom": [
+                                "http://id.loc.gov/vocabulary/geographicAreas"
+                            ],
+                            "valueDataType": {
+                                "dataTypeURI": "http://id.loc.gov/ontologies/bibframe/GeographicCoverage"
+                            }
+                        },
+                        "propertyLabel": "Lookup",
+                        "remark": "http://access.rdatoolkit.org/7.3.html",
+                        "propertyURI": "http://id.loc.gov/ontologies/bibframe/GeographicCoverage"
+                    },
+                    {
+                        "mandatory": "false",
+                        "repeatable": "true",
+                        "type": "literal",
+                        "propertyURI": "http://www.w3.org/2000/01/rdf-schema#label",
+                        "propertyLabel": "Input Geographic Coverage (if not on list)"
+                    }
+                ],
+                "id": "ld4p:RT:bf2:Form:Geog",
+                "resourceURI": "http://id.loc.gov/ontologies/bibframe/GeographicCoverage",
+                "resourceLabel": "Geographic coverage",
+                "author": "LD4P",
+                "date": "2019-08-19",
+                "schema": "https://ld4p.github.io/sinopia/schemas/0.2.0/resource-template.json"
+            }
+        ],
+        "id": "ld4p:profile:bf2:Form",
+        "title": "LD4P BIBFRAME 2.0 Form",
+        "description": "Form of Work, based on LC profile as of Aug-07-2019",
+        "date": "2019-08-19",
+        "author": "LD4P",
+        "schema": "https://ld4p.github.io/sinopia/schemas/0.2.0/profile.json"
+    }
+}

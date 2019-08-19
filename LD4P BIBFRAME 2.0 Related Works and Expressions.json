@@ -1,0 +1,189 @@
+{
+    "Profile": {
+        "resourceTemplates": [
+            {
+                "propertyTemplates": [
+                    {
+                        "mandatory": "false",
+                        "repeatable": "true",
+                        "type": "lookup",
+                        "valueConstraint": {
+                            "useValuesFrom": [
+                                "urn:ld4p:sinopia"
+                            ]
+                        },
+                        "propertyLabel": "Search related works",
+                        "propertyURI": "http://id.loc.gov/ontologies/bibframe/relatedTo"
+                    },
+
+                    {
+                        "mandatory": "false",
+                        "repeatable": "true",
+                        "type": "resource",
+                        "valueConstraint": {
+                            "valueTemplateRefs": [
+                                "ld4p:RT:bf2:Relation"
+                            ]
+                        },
+                        "propertyLabel": "Relationship Designator",
+                        "propertyURI": "http://id.loc.gov/ontologies/bflc/relation"
+                    },
+                    {
+                        "mandatory": "false",
+                        "repeatable": "true",
+                        "type": "resource",
+                        "valueConstraint": {
+                            "valueTemplateRefs": [
+                                "ld4p:RT:bf2:Note"
+                            ]
+                        },
+                        "propertyURI": "http://id.loc.gov/ontologies/bibframe/note",
+                        "propertyLabel": "Description of Related Work"
+                    }
+                ],
+                "id": "ld4p:RT:bf2:RelatedWork",
+                "resourceURI": "http://id.loc.gov/ontologies/bflc/Relationship",
+                "resourceLabel": "Related Work",
+                "author": "LD4P",
+                "date": "2019-08-19",
+                "schema": "https://ld4p.github.io/sinopia/schemas/0.2.0/resource-template.json"
+            },
+            {
+                "propertyTemplates": [
+                    {
+                        "mandatory": "false",
+                        "repeatable": "true",
+                        "type": "lookup",
+                        "valueConstraint": {
+                            "useValuesFrom": [
+                                "urn:ld4p:sinopia"
+                            ]
+                        },
+                        "propertyLabel": "Search related expressions",
+                        "propertyURI": "http://id.loc.gov/ontologies/bibframe/relatedTo"
+                    },
+
+                    {
+                        "mandatory": "false",
+                        "repeatable": "true",
+                        "type": "resource",
+                        "valueConstraint": {
+                            "valueTemplateRefs": [
+                                "ld4p:RT:bf2:Relation"
+                            ]
+                        },
+                        "propertyLabel": "Relationship Designator",
+                        "propertyURI": "http://id.loc.gov/ontologies/bflc/relation"
+                    },
+                    {
+                        "mandatory": "false",
+                        "repeatable": "true",
+                        "type": "resource",
+                        "valueConstraint": {
+                            "valueTemplateRefs": [
+                                "ld4p:RT:bf2:Note"
+                            ]
+                        },
+                        "propertyURI": "http://id.loc.gov/ontologies/bibframe/note",
+                        "propertyLabel": "Description of Related Expression"
+                    }
+                ],
+                "resourceLabel": "Related Expression",
+                "id": "ld4p:RT:bf2:RelatedExpression",
+                "resourceURI": "http://id.loc.gov/ontologies/bflc/Relationship",
+                "author": "LD4P",
+                "date": "2019-08-19",
+                "schema": "https://ld4p.github.io/sinopia/schemas/0.2.0/resource-template.json"
+            },
+            {
+                "propertyTemplates": [
+                    {
+                        "mandatory": "false",
+                        "repeatable": "true",
+                        "type": "lookup",
+                        "valueConstraint": {
+                            "useValuesFrom": [
+                                "urn:ld4p:sinopia"
+                            ]
+                        },
+                        "propertyURI": "http://id.loc.gov/ontologies/bibframe/relatedTo",
+                        "propertyLabel": "Search related instances"
+                    },
+
+                    {
+                        "mandatory": "false",
+                        "repeatable": "true",
+                        "type": "resource",
+                        "valueConstraint": {
+                            "valueTemplateRefs": [
+                                "ld4p:RT:bf2:Relation"
+                            ]
+                        },
+                        "propertyURI": "http://id.loc.gov/ontologies/bflc/relation",
+                        "propertyLabel": "Relationship Designator"
+                    },
+                    {
+                        "mandatory": "false",
+                        "repeatable": "true",
+                        "type": "resource",
+                        "valueConstraint": {
+                            "valueTemplateRefs": [
+                                "ld4p:RT:bf2:Note"
+                            ]
+                        },
+                        "propertyURI": "http://id.loc.gov/ontologies/bibframe/note",
+                        "propertyLabel": "Description of Related Instance"
+                    }
+                ],
+                "id": "ld4p:RT:bf2:RelatedInstance",
+                "resourceURI": "http://id.loc.gov/ontologies/bflc/Relationship",
+                "resourceLabel": "Related Instance",
+                "author": "LD4P",
+                "date": "2019-08-19",
+                "schema": "https://ld4p.github.io/sinopia/schemas/0.2.0/resource-template.json"
+            },
+            {
+                "propertyTemplates": [
+                    {
+                        "mandatory": "false",
+                        "repeatable": "true",
+                        "type": "literal",
+                        "propertyURI": "http://id.loc.gov/ontologies/bibframe/title",
+                        "propertyLabel": "Title referenced"
+                    }
+                ],
+                "id": "ld4p:RT:bf2:ReferenceInstance",
+                "resourceLabel": "Instance Referenced",
+                "resourceURI": "http://id.loc.gov/ontologies/bibframe/Instance",
+                "remark": "used in rare materials profile",
+                "author": "LD4P",
+                "date": "2019-08-19",
+                "schema": "https://ld4p.github.io/sinopia/schemas/0.2.0/resource-template.json"
+            },
+            {
+                "propertyTemplates": [
+                    {
+                        "mandatory": "false",
+                        "repeatable": "true",
+                        "type": "literal",
+                        "propertyURI": "http://www.w3.org/2000/01/rdf-schema#label",
+                        "propertyLabel": "Input Relationship Designator",
+                        "remark": "http://access.rdatoolkit.org/rdaappj_rdaj-16.html"
+                    }
+                ],
+                "id": "ld4p:RT:bf2:Relation",
+                "resourceURI": "http://id.loc.gov/ontologies/bflc/Relation",
+                "resourceLabel": "Relationship Designator",
+                "author": "LD4P",
+                "date": "2019-08-19",
+                "schema": "https://ld4p.github.io/sinopia/schemas/0.2.0/resource-template.json"
+            }
+        ],
+        "id": "ld4p:profile:bf2:RelatedWorkorExpression",
+        "title": "LD4P BIBFRAME 2.0 Related Works and Expressions",
+        "date": "2019-08-19",
+        "description": "Related Work or Expression, based on LC profile as of Aug-07-2019",
+        "author": "LD4P",
+        "schema": "https://ld4p.github.io/sinopia/schemas/0.2.0/profile.json"
+    }
+}
