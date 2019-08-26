@@ -90,19 +90,7 @@
                         "propertyLabel": "Date",
                         "remark": "http://access.rdatoolkit.org/2.9.6.html"
                     },
-                    {
-                        "mandatory": "false",
-                        "repeatable": "true",
-                        "type": "resource",
-                        "valueConstraint": {
-                            "valueTemplateRefs": [
-                                "ld4p:RT:bf2:Note"
-                            ]
-                        },
-                        "propertyURI": "http://id.loc.gov/ontologies/bibframe/note",
-                        "propertyLabel": "Statement of Function",
-                        "remark": "http://access.rdatoolkit.org/2.9.4.4.html"
-                    },
+                   
                     {
                         "mandatory": "false",
                         "repeatable": "true",
@@ -114,14 +102,14 @@
                         },
                         "propertyURI": "http://id.loc.gov/ontologies/bibframe/note",
                         "propertyLabel": "Note",
-                        "remark": "http://access.rdatoolkit.org/2.17.8.html"
+                        "remark": "see http://access.rdatoolkit.org/2.17.8.html and for Statement of Function see http://access.rdatoolkit.org/2.9.4.4.html"
                     }
                 ],
                 "resourceLabel": "Distribution",
                 "id": "ld4p:RT:bf2:DistributionInformation",
                 "resourceURI": "http://id.loc.gov/ontologies/bibframe/Distribution",
                 "author": "LD4P",
-                "date": "2019-08-19",
+                "date": "2019-08-26",
                 "schema": "https://ld4p.github.io/sinopia/schemas/0.2.0/resource-template.json"
             },
             {
@@ -296,7 +284,7 @@
         "id": "ld4p:profile:bf2:PublicationDistributionManufactureInformation",
         "title": "LD4P BIBFRAME 2.0 Publication, Distribution, Manufacturer Activity",
         "description": "Publication, Distribution, Manufacture Activity, based on LC profile as of Aug-07-2019",
-        "date": "2019-08-19",
+        "date": "2019-08-26",
         "author": "LD4P",
         "schema": "https://ld4p.github.io/sinopia/schemas/0.2.0/profile.json"
     }
