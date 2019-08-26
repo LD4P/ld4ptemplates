@@ -24,16 +24,18 @@
                         "type": "resource",
                         "valueConstraint": {
                             "valueTemplateRefs": [
-                                "ld4p:RT:bflc:Agents:PrimaryContribution"
+                                "ld4p:RT:bflc:Agents:PrimaryContribution",
+                                "ld4p:RT:bf2:Agents:Contribution"
                             ],
                             "valueDataType": {
                                 "dataTypeURI": "http://id.loc.gov/ontologies/bflc/PrimaryContribution"
                             }
                         },
                         "propertyURI": "http://id.loc.gov/ontologies/bibframe/contribution",
-                        "propertyLabel": "Creator of Work",
+                        "propertyLabel": "Creator of Work / Contribution",
                         "remark": "http://access.rdatoolkit.org/19.2.html"
                     },
+
                     {
                         "mandatory": "true",
                         "repeatable": "true",
@@ -47,31 +49,20 @@
                         "propertyURI": "http://id.loc.gov/ontologies/bibframe/title",
                         "propertyLabel": "Title Information"
                     },
+                  
                     {
                         "mandatory": "false",
                         "repeatable": "true",
-                        "type": "resource",
+                        "type": "lookup",
                         "valueConstraint": {
-                            "valueTemplateRefs": [
-                                "ld4p:RT:bf2:Agents:Contribution"
-                            ]
-                        },
-                        "propertyURI": "http://id.loc.gov/ontologies/bibframe/contribution",
-                        "propertyLabel": "Contribution",
-                        "remark": "http://access.rdatoolkit.org/19.3.html"
-                    },
-                    {
-                        "mandatory": "false",
-                        "repeatable": "true",
-                        "type": "resource",
-                        "valueConstraint": {
-                            "valueTemplateRefs": [
-                                "ld4p:RT:bf2:Components"
-                            ]
-                        },
+                          "useValuesFrom": [
+                                "urn:ld4p:qa:names",
+                                "urn:ld4p:qa:subjects"
+                        ]
+                      },
                         "propertyURI": "http://id.loc.gov/ontologies/bibframe/subject",
                         "propertyLabel": "Subject of the Work",
-                        "remark": "http://access.rdatoolkit.org/rdachp23_rda23-12.html"
+                        "remark": "http://access.rdatoolkit.org/rdachp23_rda23-11.html"
                     },
                     {
                         "mandatory": "false",
@@ -378,6 +369,7 @@
                         "type": "resource",
                         "valueConstraint": {
                             "valueTemplateRefs": [
+                                "ld4p:RT:bf2:Identifiers:LCCN",
                                 "ld4p:RT:bf2:Identifiers:ISBN",
                                 "ld4p:RT:bf2:Identifiers:Other",
                                 "ld4p:RT:bf2:Identifiers:Local"
@@ -399,18 +391,7 @@
                         "propertyLabel": "Notes about the Instance",
                         "remark": "http://access.rdatoolkit.org/2.17.html"
                     },
-                    {
-                        "mandatory": "false",
-                        "repeatable": "true",
-                        "type": "resource",
-                        "valueConstraint": {
-                            "valueTemplateRefs": [
-                                "ld4p:RT:bf2:RareMat:RefWork"
-                            ]
-                        },
-                        "propertyURI": "http://id.loc.gov/ontologies/bflc/relationship",
-                        "propertyLabel": "References"
-                    },
+                   
                     {
                         "mandatory": "false",
                         "repeatable": "true",
@@ -497,29 +478,19 @@
                         "propertyLabel": "Dimensions",
                         "remark": "http://access.rdatoolkit.org/3.5.html"
                     },
-                    {
-                        "mandatory": "true",
-                        "repeatable": "true",
-                        "type": "resource",
-                        "valueConstraint": {
-                            "valueTemplateRefs": [
-                                "ld4p:RT:bf2:Identifiers:LCCN"
-                            ]
-                        },
-                        "propertyURI": "http://id.loc.gov/ontologies/bibframe/identifiedBy",
-                        "propertyLabel": "LCCN"
-                    },
+                
                     {
                         "mandatory": "false",
                         "repeatable": "true",
                         "type": "resource",
                         "valueConstraint": {
                             "valueTemplateRefs": [
-                                "ld4p:RT:bf2:RelatedInstance"
+                                "ld4p:RT:bf2:RareMat:RefWork",
+                                 "ld4p:RT:bf2:RelatedInstance"
                             ]
                         },
                         "propertyURI": "http://id.loc.gov/ontologies/bflc/relationship",
-                        "propertyLabel": "Related Instance"
+                        "propertyLabel": "References and Related Instances"
                     },
                     {
                         "mandatory": "false",
