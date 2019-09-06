@@ -758,7 +758,7 @@
                                 "dataTypeURI": "http://id.loc.gov/ontologies/bibframe/Projection"
                             }
                         },
-                        "propertyURI": "http://id.loc.gov/ontologies/bibframe/projection",
+                        "propertyURI": "https://id.loc.gov/ontologies/bibframe/projection",
                         "propertyLabel": "Projection",
                         "remark": "http://access.rdatoolkit.org/7.26.html"
                     },
@@ -768,7 +768,7 @@
                         "type": "lookup",
                         "valueConstraint": {
                             "useValuesFrom": [
-                                "http://id.loc.gov/vocabulary/mrelief"
+                                "https://id.loc.gov/vocabulary/mrelief"
                             ],
                             "valueDataType": {
                                 "dataTypeURI": "http://id.loc.gov/ontologies/bflc/Relief"
@@ -832,7 +832,7 @@
                         "type": "lookup",
                         "valueConstraint": {
                             "useValuesFrom": [
-                                "http://id.loc.gov/vocabulary/mscale"
+                                "https://id.loc.gov/vocabulary/mscale"
                             ],
                             "valueDataType": {
                                 "dataTypeURI": "http://id.loc.gov/ontologies/bibframe/Scale"
