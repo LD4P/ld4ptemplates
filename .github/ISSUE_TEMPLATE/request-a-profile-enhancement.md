@@ -1,6 +1,6 @@
 ---
 name: Request a profile enhancement
-about: Use this template to request enhancements to a LD4P base profiles located in
+about: Use this template to request enhancements to a LD4P base profile located in
   this repository
 title: ''
 labels: enhancement
