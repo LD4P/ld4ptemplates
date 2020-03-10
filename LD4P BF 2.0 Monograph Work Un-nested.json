@@ -45,7 +45,7 @@
               "valueTemplateRefs": [],
               "useValuesFrom": [
                 "urn:ld4p:qa:genres",
-                "urn:ld4p:qa:mesh",
+                "urn:ld4p:qa:mesh:publication_type",
                 "urn:ld4p:qa:gettyaat:Objects__Object_Genres"
               ],
               "defaults": [],
@@ -202,7 +202,7 @@
               "useValuesFrom": [
                 "urn:ld4p:qa:subjects",
                 "urn:ld4p:qa:names",
-                "urn:ld4p:qa:mesh"
+                "urn:ld4p:qa:mesh:subject"
               ],
               "valueTemplateRefs": [],
               "defaults": []
