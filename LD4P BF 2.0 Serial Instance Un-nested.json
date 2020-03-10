@@ -1,0 +1,397 @@
+{
+  "Profile": {
+    "resourceTemplates": [
+      {
+        "id": "ld4p:RT:bf2:Serial:Instance:Un-nested",
+        "propertyTemplates": [
+          {
+            "propertyLabel": "Title Information",
+            "propertyURI": "http://id.loc.gov/ontologies/bibframe/title",
+            "valueConstraint": {
+              "valueTemplateRefs": [
+                "ld4p:RT:bf2:InstanceTitle",
+                "ld4p:RT:bf2:Serial:Title:VarTitle",
+                "ld4p:RT:bf2:Serial:Title:AbbrTitle",
+                "ld4p:RT:bf2:ParallelTitle",
+                "ld4p:RT:bflc:TranscribedTitle"
+              ],
+              "useValuesFrom": [],
+              "defaults": []
+            },
+            "mandatory": "true",
+            "repeatable": "true",
+            "type": "resource",
+            "resourceTemplates": []
+          },
+          {
+            "mandatory": "false",
+            "repeatable": "true",
+            "type": "literal",
+            "propertyLabel": "Statement of Responsibility",
+            "remark": "http://access.rdatoolkit.org/2.4.2.html",
+            "propertyURI": "http://id.loc.gov/ontologies/bibframe/responsibilityStatement",
+            "resourceTemplates": [],
+            "valueConstraint": {
+              "valueTemplateRefs": [],
+              "useValuesFrom": [],
+              "defaults": []
+            }
+          },
+          {
+            "propertyLabel": "Edition Statement",
+            "propertyURI": "http://id.loc.gov/ontologies/bibframe/editionStatement",
+            "mandatory": "false",
+            "repeatable": "true",
+            "type": "literal",
+            "remark": "http://access.rdatoolkit.org/2.5.html",
+            "resourceTemplates": [],
+            "valueConstraint": {
+              "valueTemplateRefs": [],
+              "useValuesFrom": [],
+              "defaults": []
+            }
+          },
+          {
+            "mandatory": "false",
+            "repeatable": "true",
+            "type": "literal",
+            "propertyLabel": "Transcribed Provider Statement",
+            "propertyURI": "http://id.loc.gov/ontologies/bibframe/provisionActivityStatement",
+            "remark": "http://access.rdatoolkit.org/2.8.html",
+            "resourceTemplates": [],
+            "valueConstraint": {
+              "valueTemplateRefs": [],
+              "useValuesFrom": [],
+              "defaults": []
+            }
+          },
+          {
+            "propertyLabel": "Publication, Distribution, Manufacture, Production",
+            "propertyURI": "http://id.loc.gov/ontologies/bibframe/provisionActivity",
+            "type": "resource",
+            "valueConstraint": {
+              "valueTemplateRefs": [
+                "ld4p:RT:bf2:Serial:PublicationInformation",
+                "ld4p:RT:bf2:Serial:DistributionInformation",
+                "ld4p:RT:bf2:Serial:ManufactureInformation",
+                "ld4p:RT:bf2:Serial:ProductionInformation"
+              ],
+              "useValuesFrom": [],
+              "defaults": []
+            },
+            "mandatory": "false",
+            "repeatable": "true",
+            "resourceTemplates": []
+          },
+          {
+            "mandatory": "false",
+            "repeatable": "true",
+            "type": "literal",
+            "resourceTemplates": [],
+            "valueConstraint": {
+              "valueTemplateRefs": [],
+              "useValuesFrom": [],
+              "defaults": []
+            },
+            "propertyURI": "http://id.loc.gov/ontologies/bibframe/date",
+            "propertyLabel": "Date published"
+          },
+          {
+            "mandatory": "false",
+            "repeatable": "true",
+            "type": "literal",
+            "propertyURI": "http://id.loc.gov/ontologies/bibframe/copyrightDate",
+            "propertyLabel": "Copyright Date",
+            "remark": "http://access.rdatoolkit.org/2.11.html",
+            "resourceTemplates": [],
+            "valueConstraint": {
+              "valueTemplateRefs": [],
+              "useValuesFrom": [],
+              "defaults": []
+            }
+          },
+          {
+            "mandatory": "false",
+            "repeatable": "true",
+            "type": "literal",
+            "resourceTemplates": [],
+            "valueConstraint": {
+              "valueTemplateRefs": [],
+              "useValuesFrom": [],
+              "defaults": [],
+              "valueDataType": {}
+            },
+            "propertyURI": "http://id.loc.gov/ontologies/bibframe/firstIssue",
+            "propertyLabel": "Serial Numbering First Issue (RDA 2.6)",
+            "remark": "enumeration and/or chronology and/or date of serial first issue"
+          },
+          {
+            "mandatory": "false",
+            "repeatable": "true",
+            "type": "literal",
+            "resourceTemplates": [],
+            "valueConstraint": {
+              "valueTemplateRefs": [],
+              "useValuesFrom": [],
+              "defaults": [],
+              "valueDataType": {}
+            },
+            "propertyURI": "http://id.loc.gov/ontologies/bibframe/lastIssue",
+            "propertyLabel": "Serial Numbering Last Issue (RDA 2.6)",
+            "remark": "enumeration and/or chronology and/or date of serial last issue"
+          },
+          {
+            "mandatory": "false",
+            "repeatable": "true",
+            "type": "resource",
+            "valueConstraint": {
+              "valueTemplateRefs": [
+                "ld4p:RT:bf2:SeriesInformation"
+              ],
+              "useValuesFrom": [],
+              "defaults": []
+            },
+            "propertyLabel": "Series Statement",
+            "propertyURI": "http://id.loc.gov/ontologies/bibframe/hasSeries",
+            "resourceTemplates": []
+          },
+          {
+            "propertyLabel": "Identifiers",
+            "propertyURI": "http://id.loc.gov/ontologies/bibframe/identifiedBy",
+            "type": "resource",
+            "valueConstraint": {
+              "valueTemplateRefs": [
+                "ld4p:RT:bf2:Identifiers:Other",
+                "ld4p:RT:bf2:Identifiers:Local",
+                "ld4p:RT:bf2:Identifiers:LCCN"
+              ],
+              "useValuesFrom": [],
+              "defaults": []
+            },
+            "mandatory": "false",
+            "repeatable": "true",
+            "resourceTemplates": []
+          },
+          {
+            "mandatory": "false",
+            "repeatable": "true",
+            "type": "resource",
+            "valueConstraint": {
+              "valueTemplateRefs": [
+                "ld4p:RT:bf2:Note"
+              ],
+              "useValuesFrom": [],
+              "defaults": []
+            },
+            "propertyLabel": "Notes about the Instance",
+            "remark": "http://access.rdatoolkit.org/2.17.html",
+            "propertyURI": "http://id.loc.gov/ontologies/bibframe/note",
+            "resourceTemplates": []
+          },
+          {
+            "propertyLabel": "Extent",
+            "propertyURI": "http://id.loc.gov/ontologies/bibframe/extent",
+            "valueConstraint": {
+              "valueTemplateRefs": [
+                "ld4p:RT:bf2:Extent"
+              ],
+              "useValuesFrom": [],
+              "defaults": []
+            },
+            "mandatory": "false",
+            "repeatable": "true",
+            "type": "resource",
+            "resourceTemplates": []
+          },
+          {
+            "propertyLabel": "Dimensions",
+            "propertyURI": "http://id.loc.gov/ontologies/bibframe/dimensions",
+            "mandatory": "false",
+            "repeatable": "true",
+            "type": "literal",
+            "remark": "http://access.rdatoolkit.org/3.5.html",
+            "resourceTemplates": [],
+            "valueConstraint": {
+              "valueTemplateRefs": [],
+              "useValuesFrom": [],
+              "defaults": []
+            }
+          },
+          {
+            "mandatory": "false",
+            "repeatable": "true",
+            "type": "lookup",
+            "valueConstraint": {
+              "useValuesFrom": [
+                "https://id.loc.gov/vocabulary/issuance"
+              ],
+              "valueDataType": {
+                "dataTypeURI": "http://id.loc.gov/ontologies/bibframe/Issuance"
+              },
+              "defaults": [
+                {
+                  "defaultURI": "http://id.loc.gov/vocabulary/issuance/serl",
+                  "defaultLiteral": "serial"
+                }
+              ],
+              "valueTemplateRefs": []
+            },
+            "propertyURI": "http://id.loc.gov/ontologies/bibframe/issuance",
+            "propertyLabel": "Mode of Issuance",
+            "remark": "http://access.rdatoolkit.org/2.13.html",
+            "resourceTemplates": []
+          },
+          {
+            "propertyLabel": "Media type",
+            "propertyURI": "http://id.loc.gov/ontologies/bibframe/media",
+            "repeatable": "true",
+            "type": "lookup",
+            "valueConstraint": {
+              "useValuesFrom": [
+                "https://id.loc.gov/vocabulary/mediaTypes"
+              ],
+              "valueDataType": {
+                "dataTypeURI": "http://id.loc.gov/ontologies/bibframe/Media"
+              },
+              "defaults": [
+                {
+                  "defaultURI": "http://id.loc.gov/vocabulary/mediaTypes/n",
+                  "defaultLiteral": "unmediated"
+                }
+              ],
+              "valueTemplateRefs": []
+            },
+            "mandatory": "false",
+            "remark": "http://access.rdatoolkit.org/3.2.html",
+            "resourceTemplates": []
+          },
+          {
+            "propertyLabel": "Carrier type",
+            "propertyURI": "http://id.loc.gov/ontologies/bibframe/carrier",
+            "repeatable": "true",
+            "type": "lookup",
+            "valueConstraint": {
+              "useValuesFrom": [
+                "https://id.loc.gov/vocabulary/carriers"
+              ],
+              "valueDataType": {
+                "dataTypeURI": "http://id.loc.gov/ontologies/bibframe/Carrier"
+              },
+              "defaults": [
+                {
+                  "defaultURI": "http://id.loc.gov/vocabulary/carriers/nc",
+                  "defaultLiteral": "volume"
+                }
+              ],
+              "valueTemplateRefs": []
+            },
+            "mandatory": "false",
+            "remark": "http://access.rdatoolkit.org/3.3.html",
+            "resourceTemplates": []
+          },
+          {
+            "mandatory": "false",
+            "repeatable": "true",
+            "type": "resource",
+            "valueConstraint": {
+              "valueTemplateRefs": [
+                "ld4p:RT:bf2:Serial:Frequency"
+              ],
+              "useValuesFrom": [],
+              "defaults": []
+            },
+            "propertyLabel": "Frequency",
+            "propertyURI": "http://id.loc.gov/ontologies/bibframe/frequency",
+            "resourceTemplates": []
+          },
+          {
+            "propertyLabel": "Uniform Resource Locator",
+            "propertyURI": "http://id.loc.gov/ontologies/bibframe/electronicLocator",
+            "type": "resource",
+            "mandatory": "false",
+            "repeatable": "true",
+            "remark": "http://access.rdatoolkit.org/4.6.html",
+            "resourceTemplates": [],
+            "valueConstraint": {
+              "valueTemplateRefs": [],
+              "useValuesFrom": [],
+              "defaults": []
+            }
+          },
+          {
+            "mandatory": "false",
+            "repeatable": "true",
+            "type": "resource",
+            "valueConstraint": {
+              "valueTemplateRefs": [
+                "ld4p:RT:bf2:Serial:RelatedInstance"
+              ],
+              "useValuesFrom": [],
+              "defaults": []
+            },
+            "propertyURI": "http://id.loc.gov/ontologies/bflc/relationship",
+            "propertyLabel": "Related Manifestation",
+            "resourceTemplates": []
+          },
+          {
+            "mandatory": "false",
+            "repeatable": "true",
+            "type": "resource",
+            "valueConstraint": {
+              "valueTemplateRefs": [
+                "ld4p:RT:bf2:Serial:Item"
+              ],
+              "useValuesFrom": [],
+              "defaults": []
+            },
+            "propertyURI": "http://id.loc.gov/ontologies/bibframe/hasItem",
+            "propertyLabel": "Has Item",
+            "remark": "Item which is an example of the described Instance.",
+            "resourceTemplates": []
+          },
+          {
+            "propertyLabel": "Instance of",
+            "propertyURI": "http://id.loc.gov/ontologies/bibframe/instanceOf",
+            "type": "resource",
+            "valueConstraint": {
+              "valueTemplateRefs": [],
+              "useValuesFrom": [],
+              "defaults": []
+            },
+            "mandatory": "false",
+            "repeatable": "true",
+            "resourceTemplates": []
+          },
+          {
+            "mandatory": "false",
+            "repeatable": "true",
+            "type": "resource",
+            "resourceTemplates": [],
+            "valueConstraint": {
+              "valueTemplateRefs": [
+                "ld4p:RT:bf2:AdminMetadata:BFDB"
+              ],
+              "useValuesFrom": [],
+              "defaults": []
+            },
+            "propertyLabel": "Administrative Metadata",
+            "propertyURI": "http://id.loc.gov/ontologies/bibframe/adminMetadata"
+          }
+        ],
+        "resourceLabel": "_Serial Instance (BF2) Un-Nested",
+        "resourceURI": "http://id.loc.gov/ontologies/bibframe/Instance",
+        "remark": "based on template ld4p:RT:bf2:Serial:Instance",
+        "author": "LD4P Nancy Fallgren (fallgrennj@mail.nih.gov)",
+        "date": "2019-08-19",
+        "schema": "https://ld4p.github.io/sinopia/schemas/0.0.9/resource-template.json"
+      }
+    ],
+    "author": "LD4P Nancy Fallgren (fallgrennj@mail.nih.gov)",
+    "date": "2020-01-29",
+    "description": "Work, Instance, Item for Serials, based on LC profile as of Aug-07-2019",
+    "id": "ld4p:profile:bf2:Serial:Instance:Un-nested",
+    "title": "LD4P BF 2.0 Serial Instance Un-nested",
+    "schema": "https://ld4p.github.io/sinopia/schemas/0.0.9/profile.json",
+    "remark": "added Transcribed Title RT to Instance; fixed enum/chron RT"
+  }
+}
