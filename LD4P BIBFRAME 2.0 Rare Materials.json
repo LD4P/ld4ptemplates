@@ -81,12 +81,13 @@
               "useValuesFrom": [
                 "urn:ld4p:qa:gettyaat:Objects__Object_Genres",
                 "urn:ld4p:qa:genres"
-              ]
+              ],
+              "defaults": []
             },
             "propertyURI": "http://id.loc.gov/ontologies/bibframe/genreForm",
             "propertyLabel": "Form of Work",
             "resourceTemplates": [],
-            "remark": "Use the QA service to retrieve AAT and LCGFT concept URIs. To use the RBMS vocabularies, copy/paste the concept URI provided here: https://rbmsvocabs.github.io/"
+            "remark": "Use the QA service to retrieve AAT and LCGFT concept URIs. To use the RBMS vocabularies, copy/paste the concept URI provided here: https://www.tat2.io/basex2/ld4p/2019/lookups"
           },
           {
             "mandatory": "false",
@@ -274,7 +275,7 @@
         "id": "ld4p:RT:bf2:RareMat:Work",
         "resourceURI": "http://id.loc.gov/ontologies/bibframe/Work",
         "resourceLabel": "_Rare Materials Work (BIBFRAME)",
-        "remark": "based on LC template ld4p:RT:bf2:RareMat:Work",
+        "remark": "based on LC template lc:RT:bf2:RareMat:Work",
         "author": "LD4P",
         "date": "2019-08-19",
         "schema": "https://ld4p.github.io/sinopia/schemas/0.0.9/resource-template.json"
@@ -433,7 +434,7 @@
             "propertyURI": "http://id.loc.gov/ontologies/bibframe/genreForm",
             "propertyLabel": "Form of Instance",
             "resourceTemplates": [],
-            "remark": "Use the QA service to retrieve AAT and LCGFT concept URIs. To use the RBMS vocabularies, copy/paste the concept URI provided here: https://rbmsvocabs.github.io/"
+            "remark": "Use the QA service to retrieve AAT and LCGFT concept URIs. To use the RBMS vocabularies, copy/paste the concept URI provided here: https://www.tat2.io/basex2/ld4p/2019/lookups"
           },
           {
             "mandatory": "false",
@@ -576,14 +577,13 @@
             "type": "resource",
             "valueConstraint": {
               "valueTemplateRefs": [
-                "ld4p:RT:bf2:RareMat:RefWork",
                 "ld4p:RT:bf2:RelatedInstance"
               ],
               "useValuesFrom": [],
               "defaults": []
             },
             "propertyURI": "http://id.loc.gov/ontologies/bflc/relationship",
-            "propertyLabel": "References and Related Instances",
+            "propertyLabel": "Related Instance",
             "resourceTemplates": []
           },
           {
@@ -615,12 +615,28 @@
             "propertyURI": "http://id.loc.gov/ontologies/bibframe/adminMetadata",
             "propertyLabel": "Administrative Metadata",
             "resourceTemplates": []
+          },
+          {
+            "mandatory": "false",
+            "repeatable": "true",
+            "type": "resource",
+            "resourceTemplates": [],
+            "valueConstraint": {
+              "valueTemplateRefs": [
+                "ld4p:RT:bf2:RareMat:RefWork"
+              ],
+              "useValuesFrom": [],
+              "valueDataType": {},
+              "defaults": []
+            },
+            "propertyLabel": "References",
+            "propertyURI": "http://id.loc.gov/ontologies/bflc/indexedIn"
           }
         ],
         "id": "ld4p:RT:bf2:RareMat:Instance",
         "resourceURI": "http://id.loc.gov/ontologies/bibframe/Instance",
         "resourceLabel": "_Rare Materials Instance (BIBFRAME)",
-        "remark": "based on LC template ld4p:RT:bf2:RareMat:Instance",
+        "remark": "based on LC template lc:RT:bf2:RareMat:Instance",
         "author": "LD4P",
         "date": "2019-08-19",
         "schema": "https://ld4p.github.io/sinopia/schemas/0.0.9/resource-template.json"
@@ -730,7 +746,7 @@
             "propertyURI": "http://id.loc.gov/ontologies/bibframe/genreForm",
             "propertyLabel": "Form of Item",
             "resourceTemplates": [],
-            "remark": "Use the QA service to retrieve AAT and LCGFT concept URIs. To use the RBMS vocabularies, copy/paste the concept URI provided here: https://rbmsvocabs.github.io/"
+            "remark": "Use the QA service to retrieve AAT and LCGFT concept URIs. To use the RBMS vocabularies, copy/paste the concept URI provided here: https://www.tat2.io/basex2/ld4p/2019/lookups"
           },
           {
             "mandatory": "false",
@@ -828,7 +844,7 @@
         "id": "ld4p:RT:bf2:RareMat:Item",
         "resourceURI": "http://id.loc.gov/ontologies/bibframe/Item",
         "resourceLabel": "Rare Materials Item (BIBFRAME)",
-        "remark": "based on LC template ld4p:RT:bf2:RareMat:Item",
+        "remark": "based on LC template lc:RT:bf2:RareMat:Item",
         "author": "LD4P",
         "date": "2019-08-19",
         "schema": "https://ld4p.github.io/sinopia/schemas/0.0.9/resource-template.json"
@@ -871,7 +887,7 @@
         "id": "ld4p:RT:bf2:RareMat:Illus",
         "resourceURI": "http://id.loc.gov/ontologies/bibframe/Illustration",
         "resourceLabel": "Illustrative content",
-        "remark": "based on LC template ld4p:RT:bf2:RareMat:Illus",
+        "remark": "based on LC template lc:RT:bf2:RareMat:Illus",
         "author": "LD4P",
         "date": "2019-08-19",
         "schema": "https://ld4p.github.io/sinopia/schemas/0.0.9/resource-template.json"
@@ -892,22 +908,20 @@
               "valueTemplateRefs": [],
               "defaults": []
             },
-            "propertyURI": "http://id.loc.gov/ontologies/bflc/relationship",
+            "propertyURI": "http://id.loc.gov/ontologies/bibframe/references",
             "propertyLabel": "Search works",
             "resourceTemplates": []
           },
           {
             "mandatory": "false",
             "repeatable": "true",
-            "type": "resource",
+            "type": "literal",
             "valueConstraint": {
-              "valueTemplateRefs": [
-                "ld4p:RT:bf2:ReferenceInstance"
-              ],
+              "valueTemplateRefs": [],
               "useValuesFrom": [],
               "defaults": []
             },
-            "propertyURI": "http://id.loc.gov/ontologies/bibframe/references",
+            "propertyURI": "http://www.w3.org/2000/01/rdf-schema#label",
             "propertyLabel": "Input work title",
             "resourceTemplates": []
           },
@@ -930,7 +944,7 @@
         "id": "ld4p:RT:bf2:RareMat:RefWork",
         "resourceURI": "http://id.loc.gov/ontologies/bflc/Relationship",
         "resourceLabel": "References",
-        "remark": "based on LC template ld4p:RT:bf2:RareMat:RefWork",
+        "remark": "based on LC template lc:RT:bf2:RareMat:RefWork",
         "author": "LD4P",
         "date": "2019-08-19",
         "schema": "https://ld4p.github.io/sinopia/schemas/0.0.9/resource-template.json"
